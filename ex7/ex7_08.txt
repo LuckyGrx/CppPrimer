@@ -1,0 +1,2 @@
+1、read函数里改变了item对象的数据成员revenue,所以将Sales_data参数定义为普通的引用
+2、print函数只是打印item对象的数据成员，不改变这些数据成员的值，所以Sales_data参数定义为常量引用

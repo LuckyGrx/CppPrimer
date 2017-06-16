@@ -1,0 +1,3 @@
+class和struct的唯一区别是默认的访问权限
+class:默认访问权限为private
+struct:默认访问权限为public
