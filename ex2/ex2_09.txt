@@ -1,0 +1,12 @@
+a)std::cin>>int input_value;
+  该定义非法，应该先定义，再调用cin方法
+  更改为：int input_value=0;
+		  std::cin>>input_value;
+b)int i={3.14}
+  该定义非法，因为初始化列表中不能存在精度缺失的情况
+  更改为：int i={3} 或 float i={3.14}
+c)double salary=wage=9999.99
+  该定义非法，因为wage还没有定义就直接初始化
+  更改为：double salary=9999.99,wage=salary
+d)int i=3.14
+  该定义合法，但存在精度缺失，i的值为3

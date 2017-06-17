@@ -1,0 +1,12 @@
+std::string global_str;
+int global_int;
+int main(){
+	int local_int;
+	std::string local_str;
+}
+
+显然，global_str和global_int是全局变量，存放在全局静态区，
+所以global_str的初值为空字符串，global_int的初值为0
+
+而local_int和local_str是局部变量，存放在栈区，而local_int是int型变量，故其初值不确定
+而local_str是string型变量，并不是内置类型，故其初始化为空字符串
