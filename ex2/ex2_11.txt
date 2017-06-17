@@ -1,0 +1,3 @@
+a)extern int ix=1024;//定义，包含初始化的extern语句是定义
+b)int iy;//定义
+c)extern int ix;//声明
