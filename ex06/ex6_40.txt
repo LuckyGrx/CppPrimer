@@ -1,0 +1,5 @@
+a)int ff(int a,int b=0,int c=0);//正确
+b)char* init(int ht=24,int wd,char bckgrnd);//错误
+说明：在默认实参规则中，一旦某个形参被赋予默认值，则它后面的所有形参都必须有默认值
+所以，应该修改为：
+char* init(int ht=24,int wd=24,char bckgrnd=' ');
