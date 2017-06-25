@@ -1,0 +1,2 @@
+vector的capacity指的是vector的容量，即在空间重新分配前，vector能够存储元素的数量
+vector的size指的是vector现有元素的数量

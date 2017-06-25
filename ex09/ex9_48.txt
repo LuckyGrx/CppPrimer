@@ -1,0 +1,2 @@
+string number("0123456"),name("r2d2");
+numbers.find(name);//返回string::npos
