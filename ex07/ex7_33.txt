@@ -1,0 +1,7 @@
+pos Screen::size() const{
+	return height*width;
+}
+//编译器会提示找不到pos这个类型
+Screen::pos Screen::size() const{
+	return height*width;
+}
