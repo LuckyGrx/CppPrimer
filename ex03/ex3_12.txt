@@ -1,0 +1,3 @@
+a) vector<vector<int>> ivec;//正确,ivec不包含元素
+b) vector<string> svec=ivec;//错误,不能将vector<vector<int>>类型的对象赋值给vector<string>类型的对象
+c) vector<string> svec(10,"null");//正确,svec包含10个初始化为"null"的string元素

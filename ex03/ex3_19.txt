@@ -1,0 +1,8 @@
+1) vector<int> ivec(10,42);
+2) vector<int> ivec{42,42,42,42,42,42,42,42,42,42};
+3) vector<int> ivec;
+   for(int i=0;i<10;++i){
+	   ivec.push_back(42);
+   }
+
+显然，方案1)最好，因为代码短小精悍呀

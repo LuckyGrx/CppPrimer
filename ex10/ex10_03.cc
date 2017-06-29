@@ -13,6 +13,6 @@ using std::vector;
 
 int main(){
 	vector<int> vInt{1,2,3,4,5,6};
-	cout<<"accumulate of vector<int> is "<<accumulate(vInt.begin(),vInt.end(),0)<<endl;
+	cout<<"accumulate of vector<int> is "<<accumulate(vInt.cbegin(),vInt.cend(),0)<<endl;
 	return 0;
 }
