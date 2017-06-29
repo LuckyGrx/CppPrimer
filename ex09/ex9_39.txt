@@ -1,0 +1,6 @@
+vector<string> svec;//定义了一个vector容器，其元素类型为string
+svec.reserve(1024);//将这个容器的容量设定为1024
+string word;//定义了一个string变量
+while(cin>>word)//用该string变量接收从标准输入读入的字符
+	svec.push_back(word);//将该string变量放入vector容器的末尾
+svec.resize(svec.size()+svec.size()/2);//将该vector容器的大小设定为目前大小的1.5倍，增加的部分会被值初始化为空string
