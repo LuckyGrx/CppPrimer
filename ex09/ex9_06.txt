@@ -1,0 +1,5 @@
+list<int> lst1;
+list<int>::iterator iter1=lst1.begin(),
+					iter2=lst2.end();
+while(iter1<iter2) /*...*/
+//迭代器只支持==和!=两种比较操作，不支持<比较操作,可以修改为：while(iter1!=iter2)

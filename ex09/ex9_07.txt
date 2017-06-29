@@ -1,0 +1,1 @@
+为了索引int的vector中的元素，应该使用vector<int>::size_type
