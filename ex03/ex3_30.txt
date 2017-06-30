@@ -1,0 +1,4 @@
+constexpr size_t array_size=10;
+int ia[array_size];
+for(size_t ix=1;ix<=array_size;++ix)//更改为:for(size_t ix=0;ix<array_size;++ix)
+	ia[ix]=ix;

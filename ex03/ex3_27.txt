@@ -1,0 +1,5 @@
+unsigned buf_size=1024;
+a)int ia[buf_size];//错误，buf_size不是常量表达式
+b)int ia[4*7-14];//正确
+c)int ia[txt_size()];//错误，txt_size()的返回值要在运行后才能得知，并不是常量表达式
+d)char str[11]="fundamental";//错误，字符串字面值得长度包含空字符'\0',故这个数组的维度应该为12
