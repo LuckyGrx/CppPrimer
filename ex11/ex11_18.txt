@@ -1,0 +1,1 @@
+pair<const string,size_t>::const_iterator map_it=word_count.cbegin();
