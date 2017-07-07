@@ -1,0 +1,4 @@
+int i=0;
+a)double* dp=&i;//非法,不能将一个int*类型对象赋值给一个double*类型对象
+b)int* ip=i;//非法,不能将一个int类型对象赋值给int*类型对象
+c)int* p=&i;//合法
