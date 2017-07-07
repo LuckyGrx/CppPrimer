@@ -1,0 +1,7 @@
+a) int i=-1,&r=0;//i合法,r不合法,引用不能绑定整形字面值
+b) int* const p2=&i2;//合法
+c) const int i=-1,&r=0;//合法
+d) const int* const p3=&i2;//合法
+e) const int* p1=&i2;//合法
+f) const int& const r2;//不合法,引用不能是const类型
+g) const int i2=i,&r=i;//合法
