@@ -1,0 +1,6 @@
+a) *iter++;//合法，相当于表达式*(iter++),获取当前迭代器所对应的值,并将迭代器自增
+b) (*iter)++;//不合法，string类型不支持++运算符
+c) *iter.empty();//不合法，相当于表达式*(iter.empty()),迭代器应该使用箭头运算符调用empty方法
+d) iter->empty();//合法，获取当前迭代器所对应的string值是否是空string
+e) ++*iter;//不合法，string类型不支持++运算符
+f) iter++->empty();//合法，判断当前迭代器所对应的string值是否为空，然后再迭代器自增
