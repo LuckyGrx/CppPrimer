@@ -1,0 +1,27 @@
+a) if(ival1!=ival2)
+       ival1=ival2
+   else ival1=ival2=0;
+//修改为：if(ival1!=ival2)
+              ival1=ival2;
+		  else
+		      ival2=ival2=0;
+b) if(ival<minval)
+       minval=ival;
+	   occurs=1;
+//修改为：if(ival<minval){
+	          minval=ival;
+			  occurs=1;
+		  }
+c) if(int ival=get_value())
+       cout<<"ival="<<ival<<endl;
+   if(!ival)
+       cout<<"ival=0\n";
+//修改为：int ival;
+	      if(ival=get_value())
+	          cout<<"ival="<<ival<<endl;
+		  if(!ival)
+	          cout<<"ival=0\n";
+d) if(ival=0)
+       ival=get_value();
+//修改为：if(0==ival)
+	          ival=get_value();
