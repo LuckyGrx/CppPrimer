@@ -1,0 +1,1 @@
+显然，elem的类型为const string&类型
