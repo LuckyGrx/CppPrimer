@@ -1,0 +1,4 @@
+const char* cp="Hello World";
+if(cp&&*cp)
+//首先判断指针cp是否为nullptr,要是为nullptr,由于短路特性,之后的*cp就不会运算
+  要是不为nullptr,则进一步判断*cp是否为"",显然，这两个运算顺序不能颠倒
