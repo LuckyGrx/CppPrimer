@@ -1,0 +1,13 @@
+int a=3,b=4;
+decltype(a) c=a;
+decltype((b)) d=a;
+++c;
+++d;
+//a:int
+  b:int
+  c:int
+  d:int&
+结束时：a=4
+        b=4
+		c=4
+		d=4
