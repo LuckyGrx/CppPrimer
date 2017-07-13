@@ -1,0 +1,9 @@
+void reset(int& i){//当实参到形参的拷贝过大时，需要使用引用
+	i=0;
+}
+
+void travel(std::vector<int>::iterator begin,std::vector<int>::iterator end){
+	for(std::vector<int>::iterator iter=begin;iter!=end;++iter)
+		std::cout<<*iter<<std::endl;
+}
+//当希望函数内部的改变不影响函数调用传进来的实参时，就不应该使用引用

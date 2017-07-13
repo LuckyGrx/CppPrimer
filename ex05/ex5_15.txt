@@ -1,0 +1,15 @@
+a) for(int ix=0;ix!=sz;++ix){/*...*/}
+       if(ix!=sz)
+	       //...
+修改为：int ix;
+        for(ix=0;ix!=sz;++ix){/*...*/}
+		    if(ix!=sz)
+	            //...
+
+b) int ix;
+   for(ix!=sz;++ix){/*...*/}
+修改为：int ix;
+        for(;ix!=sz;++ix){/*...*/}
+
+c) for(int ix=0;ix!=sz;++ix,++sz){/*...*/}
+修改为：for(int ix=0;ix!=sz;++ix){/*...*/}
