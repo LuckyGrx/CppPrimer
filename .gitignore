@@ -1,2 +1,2 @@
-#delete a.out
-a.out
+# Executables
+*.out
