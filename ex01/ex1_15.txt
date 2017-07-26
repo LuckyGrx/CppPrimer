@@ -1,0 +1,4 @@
+常见的编译错误信息有：
+1) 语法错误(syntax error)
+2) 类型错误(type error)
+3) 声明错误(declaration error)
