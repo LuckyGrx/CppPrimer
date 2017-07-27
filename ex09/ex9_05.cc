@@ -9,18 +9,18 @@
 using std::cout;
 using std::endl;
 using std::vector;
-bool isContainNumber(vector<int>::const_iterator beg,vector<int>::const_iterator end,int val){
+vector<int>::const_iterator isContainVal(vector<int>::const_iterator beg,vector<int>::const_iterator end,int val){
 	while(beg!=end){
 		if(*beg==val)
-			return true;
+			return beg;
 		++beg;
 	}
-	return false;
+	return end;
 }
 int main(){
 	vector<int> ivec{1,2,3,4,5,6};
 	int val=4;
-	if(isContainNumber(ivec.cbegin(),ivec.cend(),val)){
+	if(isContainVal(ivec.cbegin(),ivec.cend(),val)!=ivec.cend()){
 		cout<<"vector contain this value"<<endl;
 	}else{
 		cout<<"vector not contain this value"<<endl;
