@@ -1,0 +1,15 @@
+class Base{...};
+a) class Derived:public Derived{...};
+//不是声明语句，原因有：
+1）声明不是定义，没有{...}
+2) 类不能派生自己
+3）派生类的声明不需要派生列表
+
+b) class Derived:private Base{...};//
+//不是声明语句，原因有：
+1）声明不是定义，没有{...}
+2) 派生类的声明不需要派生列表
+
+c) class Derived:public Base;//
+//不是声明语句，原因有：
+1）派生类的声明不需要派生列表
