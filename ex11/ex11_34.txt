@@ -1,0 +1,2 @@
+函数原型为const string& transform(const string &s,const map<string,string> &m);
+显然，map为const类型，若map的关键字中不存在s，则下标运算是可能改变m内的数据的，从而编译器会报错，所以不能将find替换为下标运算符
