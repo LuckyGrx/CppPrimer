@@ -1,0 +1,5 @@
+pos.first->second
+.运算符和->运算符的优先级一致，相符合左结合性
+显然pos的类型是pair<multimap<string,string>::iterator,multimap<string,string>::iterator>
+pos.first的类型为multi<string,string>::iterator
+从而pos.first->second的类型为string，即打印的内容为带查找作者的著作题目
