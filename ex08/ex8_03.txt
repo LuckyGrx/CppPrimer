@@ -1,0 +1,3 @@
+while(cin>>i)
+//当输入的内容不属于i的类型时，或者
+  输入文件结束标志(Linux里为ctrl+d)，while循环会终止

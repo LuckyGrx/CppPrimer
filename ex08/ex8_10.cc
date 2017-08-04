@@ -34,5 +34,6 @@ int main(){
 			cout<<word<<endl;
 		}
 	}
+	ifs.close();
 	return 0;
 }
