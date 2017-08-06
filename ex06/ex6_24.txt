@@ -1,0 +1,10 @@
+void print(const int ia[10]){
+	for(size_t i=0;i!=10;++i)
+		cout<<ia[i]<<endl;
+}
+//函数的形参若是数组，则调用时，实参会自动转换成指向数组首元素的指针，
+所以数组的维度是无法隐式的通过数组名传递过来的，必须显示的通过形参传递，所以修改为：
+void print(const int* ia,size_t len){
+	for(size_t i=0;i!=len;++i)
+		cout<<ia[i]<<endl;
+}
