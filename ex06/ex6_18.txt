@@ -1,0 +1,4 @@
+a) bool compare(matrix&,matrix&);
+  功能：比较两个matrix类的实例的相对大小
+b) vector<int>::iterator change_val(int,vector<int>::iterator);
+  功能：将形参int赋值给形参迭代器所指向的元素，以改变该元素的值

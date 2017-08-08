@@ -1,0 +1,8 @@
+double calc(double);
+int count(const string&,char);
+int sum(vector<int>::iterator,vector<int>::iterator,int);
+vector<int> vec(10);
+a) calc(23.4,55.1);//不合法，没有找到和调用相匹配的函数形参列表
+b) count("abcda",'a');//合法
+c) calc(66);//合法
+d) sum(vec.begin(),vec.end(),3.8);//合法
