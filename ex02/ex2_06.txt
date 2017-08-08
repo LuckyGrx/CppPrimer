@@ -1,0 +1,2 @@
+int month=9,day=7;//使用十进制字面值，month的值为9，day的值为7
+int month=09,day=07;//使用八进制字面值，month会提示错误，day的值为7

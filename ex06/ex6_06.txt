@@ -1,0 +1,10 @@
+局部变量：在块内部定义的变量
+形参：在函数形参列表内定义的局部变量
+局部静态变量：在块内部定义的静态变量，具有全局生命周期
+
+size_t count_call(int cnt){//cnt是形参
+	int loc=0;//loc是局部变量
+	static size_t ret=0;//ret是局部静态变量
+	ret+=cnt;
+	return ret;
+}

@@ -1,0 +1,7 @@
+显然Sales_data类并不是聚合类(类内成员具有类内初始值),但却尝试用花括号括起来的成员初始化列表来
+初始化聚合类的数据成员.
+修改如下：
+Sales_data item;
+item.bookNo="978-0590353403";
+item.units_sold=25;
+item.revenue=15.00;

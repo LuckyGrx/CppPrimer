@@ -1,0 +1,12 @@
+a) f(2.56,42)
+//可行函数：void f(int,int)      void f(double,double=3.14)
+  最佳匹配：二义性
+b) f(42)
+//可行函数：void f(int)          void f(double,double=3.14)
+  最佳匹配：void f(int)
+c) f(42,0)
+//可行函数：void f(int,int)          void f(double,double=3.14)
+  最佳匹配：void f(int,int)
+d) f(2.56,3.14)
+//可行函数：void f(int,int)      void f(double,double=3.14)
+  最佳匹配：void f(double,double=3.14)

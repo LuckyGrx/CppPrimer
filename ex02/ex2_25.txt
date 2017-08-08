@@ -1,0 +1,13 @@
+//前提：这三条定义语句全部定义在函数体外
+a) int* ip,i,&r=i;
+ip的类型：int*,值：nullptr
+i的类型：int,值：0
+r的类型：int&,值：0
+
+b) int i,*ip=0;
+i的类型：int,值：0
+ip的类型：int*,值：字面常量0的地址
+
+c) int* ip,ip2;
+ip的类型：int*,值：nullptr
+ip2的类型：int,值：0

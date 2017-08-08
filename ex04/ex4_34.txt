@@ -1,0 +1,5 @@
+a) if(fval)//fval从float类型转换成bool类型
+b) dval=fval+ival;//ival从int类型转换成float类型，然后fval+ival的和从float类型
+                    转换成double类型
+c) dval+ival*cval;//cval从char类型转换成int类型，ival*cval的积从int类型
+                    转换成double类型

@@ -1,0 +1,1 @@
+使用string类的方法reserve,将string对象的空间分配初始化为100

@@ -1,0 +1,3 @@
+map<string,string> m;
+则可以用string类型对该map进行下标操作，
+下标运算符返回的string&类型

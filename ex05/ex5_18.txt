@@ -1,0 +1,22 @@
+a)do{//缺少括号
+	 int v1,v2;
+	 cout<<"Please enter two numbers to sum:";
+	 if(cin>>v1>>v2)
+		 cout<<"Sum is: "<<v1+v2<<endl;
+  }while(cin);
+
+b)do{
+      //...
+  }while(int ival=get_response());//不允许在条件部分定义变量
+修改为：int ival;
+        do{
+			//...
+		}while(ival=get_response());
+
+c)do{
+      int ival=get_response();//循环条件不允许定义在do的内部(do内部的局部变量的生命周期只在括号以内)
+  while(ival);
+修改为:int ival;
+       do{
+		   ival=get_response();
+	   }while(ival);

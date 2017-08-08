@@ -1,0 +1,4 @@
+之所以使用前置版本，是因为使用前置版本效率更高
+vector<int>::size_type cnt=ivec.size();
+for(vector<int>::size_type ix=0;ix!=ivec.size();ix++,cnt--)
+	ivec[ix]=cnt;

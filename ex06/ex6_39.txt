@@ -1,0 +1,8 @@
+a) int calc(int,int);
+   int calc(const int,const int);
+b) int get();
+   double get();
+c) int* reset(int*);
+   double* reset(double*);
+//在C++中,重载的函数是在形参数量或形参类型上有所区别,所以b是不合法的,而c是合法的
+  对于a来说,顶层const形参和没有顶层const形参是一样的,所以a也是不合法的

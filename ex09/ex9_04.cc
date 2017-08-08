@@ -9,23 +9,21 @@
 using std::cout;
 using std::endl;
 using std::vector;
-bool isContainNumber(vector<int>& vecInt,int number){
-	vector<int>::const_iterator begin=vecInt.cbegin();
-	vector<int>::const_iterator end=vecInt.cend();
-	while(begin!=end){
-		if(*begin==number)
+bool isContainNumber(vector<int>::const_iterator beg,vector<int>::const_iterator end,int val){
+	while(beg!=end){
+		if(*beg==val)
 			return true;
-		++begin;
+		++beg;
 	}
 	return false;
 }
 int main(){
-	vector<int> vecInt{1,2,3,4,5,6};
-	int number=4;
-	if(isContainNumber(vecInt,number)){
-		cout<<"vector contain this number"<<endl;
+	vector<int> ivec{1,2,3,4,5,6};
+	int val=4;
+	if(isContainNumber(ivec.cbegin(),ivec.cend(),val)){
+		cout<<"vector contain this value"<<endl;
 	}else{
-		cout<<"vector not contain this number"<<endl;
+		cout<<"vector not contain this value"<<endl;
 	}
 	return 0;
 }

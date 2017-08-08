@@ -1,0 +1,4 @@
+a) "Who goes with F\145rgus?\012"\\"Who goes with Fergus?\n",字符串字面值
+b) 3.14e1L\\long double,31.4
+c) 1024f\\float,1024
+d) 3.14L\\long double,3.14

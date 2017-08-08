@@ -1,0 +1,8 @@
+double dval;
+int ival;
+int *pi;
+dval=ival=pi=0;
+//由于赋值运算符满足右结合律,所以先进行pi=0的合法运算，而pi的类型是int*,是不能进行赋值给int类型的变量ival的
+//修改为：
+dval=ival=0;
+pi=0;

@@ -1,0 +1,14 @@
+a) while(string::iterator iter!=s.end()){/*...*/}
+//作用：运用迭代器去遍历string类型的变量s
+//问题：1)迭代器iter没有初始化
+        2)迭代器iter没有自增运算，导致程序死循环
+//解决：string::iterator iter=s.begin();
+		while(iter!=s.end()){
+			++iter;
+		}
+b) while(bool status=find(word)){/*...*/}
+	  if(!status){/*...*/}
+//问题：bool类型的变量status的作用于只在while循环内起作用，导致if里无法发现这个变量的定义
+//解决：bool status;
+	    while(status=find(word)){/*...*/}
+		if(!status){/*...*/}

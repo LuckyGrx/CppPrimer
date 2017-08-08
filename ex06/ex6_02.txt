@@ -1,0 +1,20 @@
+a) int f(){
+	string s;
+	//...
+	return s;
+}
+//该函数错误：返回值类型和函数返回类型不匹配
+修改为：string f(){     或     int f(){
+		    string s;              int s;
+			//...                  //...
+			return s;              return s;
+		}                      }
+b) f2(int i){/*...*/}
+//该函数错误：没有函数返回类型
+修改为：void f2(int i){/*...*/}
+c) int calc(int v1,int v1) /*...*/}
+//该函数错误：形参名有重复，函数体缺少一个左括号
+修改为：int calc(int v1,int v2){/*...*/}
+d) double square(double x) return x*x;
+//该函数错误：函数体缺少一对括号
+修改为：double square(double x){return x*x}

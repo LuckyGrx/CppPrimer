@@ -1,0 +1,4 @@
+a) cval='a'+3;//'a‘先从char类型转换成int类型，’a'+3的和从int类型转换成char类型
+b) fval=ui-ival*1.0;//ival先从int类型转换成double类型，ui的类型从unsigned int类型转换成double类型，ui-ival*1.0的差从double类型转换成float类型
+c) dval=ui*fval;//fval从float类型转换成unsigned int类型，ui*fval的积从unsigned int类型转换成double类型
+d) cval=ival+fval+dval;//ival从int类型转换成float类型，ival+fval的和从flaot类型转换成double类型，ival+fval+dval的和从double类型转换成char类型

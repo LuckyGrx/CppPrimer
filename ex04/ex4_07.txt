@@ -1,0 +1,11 @@
+当计算的结果超出该类型所能表示的范围时就会产生溢出
+unsigned short x=65535;
+x=x+1;//溢出
+cout<<x<<endl;//输出0
+short y=32767;
+y=y+1;//溢出
+cout<<y<<endl;//输出-32768；
+unsigned short z=0;
+z=z-1;//溢出
+cout<<z<<endl;//输出65535
+
