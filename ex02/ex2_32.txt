@@ -1,0 +1,3 @@
+int null=0,*p=null;
+//这个代码是不合法的，修改如下：
+int null=0,*p=nullptr;
