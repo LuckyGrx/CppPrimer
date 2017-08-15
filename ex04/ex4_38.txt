@@ -1,0 +1,2 @@
+double slope=static_cast<double>(j/i);
+说明:j/i的结果是int类型，通过static_cast将其转换成double类型在赋值给变量slope

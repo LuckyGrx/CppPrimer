@@ -1,0 +1,4 @@
+a) pv=(void*)ps;   
+b) i=int(*pc);
+c) pv=&d;
+d) pc=(char*)pv;
