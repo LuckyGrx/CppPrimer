@@ -1,0 +1,5 @@
+a) manip('a','z');
+//转换等级3，类型提升，将两个形参char类型提升为int类型
+b) double dobj;
+manip(55.4,dobj);
+//转换等级4，算术类型匹配，将两个形参double类型转换成int类型
