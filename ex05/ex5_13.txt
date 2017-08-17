@@ -1,0 +1,59 @@
+a) //在case标签后，添加break语句才符合程序原意
+   unsigned aCnt=0,eCnt=0,iouCnt=0;
+   char ch=next_text();
+   switch(ch){
+	   case 'a':
+		   aCnt++;
+		   break;
+	   case 'e':
+		   eCnt++;
+		   break;
+	   default:
+		   iouCnt++;
+   }
+b) //ix的定义不能在case标签之内,因为进入default时，ix是未定义的
+   unsigned index=some_value();
+   int ix;
+   switch(index){
+	   case 1:
+		   ix=get_value();
+		   ivec[ix]=index;
+		   break;
+	   default:
+		   ix=ivec.size()-1;
+		   ivec[ix]=index;
+   }
+c) //digit的值不可能为10，不符合程序预期,且多case的表示不符合语法规范
+   unsigned evenCnt=0,oddCnt=0;
+   int digit=get_num()%10;
+   switch(digit){
+	   case 1:
+	   case 3:
+	   case 5:
+	   case 7:
+	   case 9:
+		   oddCnt++;
+		   break;
+	   case 0:
+	   case 2:
+	   case 4:
+	   case 6:
+	   case 8:
+		   evenCnt++;
+		   break;
+	}
+d) //case标签必须是整形常量表达式，而ival、jval、kval显然不是
+   const unsigned ival=512,jval=1024,kval=4095;
+   unsigned bufsize;
+   unsigned swt=get_bufCnt();
+   switch(swt){
+	   case ival:
+		   bufsize=ival*sizeof(int);
+		   break;
+	   case jval:
+		   bufsize=jval*sizeof(int);
+		   break;
+	   case kval:
+		   bufsize=kval*sizeof(int);
+		   break;
+   }
