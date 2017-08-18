@@ -1,0 +1,7 @@
+bool is_empty(string& s){ return s.empty();}
+说明：若形参申明成非常量引用，则该函数不能接受const对象、字面值的实参，并且要在一个
+      形参为const引用的函数内调用本函数，会导致编译错误。而且非常量引用的形参会给调用者
+	  一种误导，以为函数内部会更改实参的值
+修改为：
+bool is_empty(const string& s){return s.empty();}
+
