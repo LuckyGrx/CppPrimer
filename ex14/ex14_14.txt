@@ -1,0 +1,13 @@
+Sales_data& Sales_data::operator+=(const Sales_data &rhs){
+	units_sold+=rhs.units_sold;
+	revenue+=rhs.revenue;
+	return *this;
+}
+Sales_data operator+(const Sales_data &lhs,const Sales_data &rhs){
+	Sales_data sum(lhs);
+	sum+=rhs;
+	return sum;
+}
+根据上面的代码可以看出，在operator+=函数内，不存在创建局部对象并初始化的过程，且返回的是对象的引用，
+不需要在不同的栈帧内复制对象,从而从性能考虑，operator+=版本的函数更有效
+
