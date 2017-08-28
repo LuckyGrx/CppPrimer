@@ -1,0 +1,7 @@
+istream& operator>>(istream &in,Sales_data &s){
+	double price;
+	in>>s.bookNo>>s.units_sold>>price;
+	s.revenue=s.units_sold*price;
+	return in;
+}
+该Salse_data输入运算符没有错误，若输入上面两个例子，结果是一样的，没有什么变化
