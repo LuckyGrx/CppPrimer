@@ -20,6 +20,8 @@ public:
 	std::string& back();
 	std::string& front() const;
 	std::string& back() const;
+	void push_back(const std::string&) const;
+	void pop_back() const;
 private:
 	void check(size_type i,const std::string &msg) const;
 private:
@@ -56,11 +58,24 @@ inline std::string& StrBlob::back() const{
 	check(0,"back on empty StrBlob");
 	return data->back();
 }
+
+inline void StrBlob::push_back(const std::string &t){
+	data->push_back(t);
+}
+
 inline void StrBlob::pop_back(){
 	check(0,"pop_back on empty StrBlob");
 	data->pop_back();
 }
 
+inline void StrBlob::push_back(const std::string &t) const{
+	data->push_back(t);
+}
+
+inline void StrBlob::pop_back() const{
+	check(0,"pop_back on empty StrBlob");
+	data->pop_back();
+}
 int main(){
 	const StrBlob csb{"hello","world","LuckyGan"};
 	StrBlob sb{"hello","world","zack"};
