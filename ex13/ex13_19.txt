@@ -1,0 +1,33 @@
+//我认为Employee类不需要实现自己的拷贝控制成员(拷贝构造函数、拷贝赋值运算符),因为Employee类的数据成员
+//_id(即雇员姓名)具有唯一性，是不允许两个对象拥有相同的_id的，从而该类中中应该显示的delete掉这两个成员函数
+
+ ///
+ /// @file    ex13_18.h
+ /// @author  zack(18357154046@163.com)
+ /// @date    2017-09-08 19:04:58
+ ///
+#ifndef __CP5_EX13_18_H__
+#define __CP5_EX13_18_H__
+#include <string>
+
+class Employee{
+public:
+	Employee();
+	Employee(const std::string&);
+	Employee(const Employee&)=delete;
+	Employee& operator=(const Employee&)=delete;
+private:
+	std::string _name;
+	int _id;
+	static int _id_increase;
+};
+int Employee::_id_increase=0;
+
+Employee::Employee():_name(std::string()){
+	_id=_id_increase++;
+}
+
+Employee::Employee(const std::string &name):_name(name){
+	_id=_id_increase++;
+}
+#endif
