@@ -1,0 +1,2 @@
+在swap(HasPtr&,HasPtr&)函数内部分别调用了swap(lhs.ps,rhs.ps)和swap(lhs.i,rhs.i),显然这两次调用分别调用了
+swap(string*,string*)和swap(int,int)，并不是swap(HasPtr&,HasPtr&)，所以不会导致递归调用
