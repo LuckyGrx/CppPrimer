@@ -1,0 +1,19 @@
+typedef string Type;类型1
+Type initVal();// use 'string' type
+class Exercise{
+public:
+	typedef double Type;
+	Type setVal(Type);// first use 'double' type; second use 'double' type
+	Type initVal();//use 'double' type
+private:
+	int val;
+};
+Type Exercise::setVal(Type parm){//first use 'string' type; second use 'double' type
+	val=parm+initVal();//initVal use Exercise::initVal()
+	return val;//这里会报错，val的类型是int，而这里的返回类型是string类型，类型不匹配
+}
+修改方案为：
+Exercise::Type Exercise::setVal(Type parm){
+	val=parm+initval();
+	return val;
+}
