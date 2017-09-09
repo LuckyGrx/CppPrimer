@@ -1,5 +1,5 @@
-# C++ Primer 中文版 课后习题答案
-## [第1章 开始](https://github.com/LuckyGan/CppPrimer/tree/master/ch01)
+# C++ Primer 中文版(第五版) 课后习题答案
+[第1章 开始](https://github.com/LuckyGan/CppPrimer/tree/master/ch01)
 ## 第I部分   C++基础
 + [第2章 变量和基本类型](https://github.com/LuckyGan/CppPrimer/tree/master/ch02)
 + [第3章 字符串、向量和数组](https://github.com/LuckyGan/CppPrimer/tree/master/ch03)
