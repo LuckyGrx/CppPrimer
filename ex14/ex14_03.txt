@@ -1,0 +1,4 @@
+a) "cobble"=="stone"   两个版本的==都没使用，因为字符串常量的类型为const char*，并不是string类型
+b) svec1[0]==svec2[0]  使用了string版本的==
+c) svec1==svec2        使用了vector版本的==
+d) svec1[0]=="stone"   使用了string版本的==
