@@ -80,7 +80,7 @@ int main(){
 int i = 42;
 int main(){
     int i = 100;
-	int j = i;
+    int j = i;
 }
 ```
 ## 练习 2.14
@@ -154,12 +154,36 @@ int i = 42;  void *p = &i;  long *lp = &i;
 (c) int *ip, ip2;
 ```
 ## 练习 2.26
+>下面哪些句子是合法的？如果有不合法的句子，请说明为什么？
+```cpp
+(a) const int buf;
+(b) int cnt = 0;
+(c) const int sz = cnt;
+(d) ++cnt; ++sz;
+```
 ## 练习 2.27
+
 ## 练习 2.28
 ## 练习 2.29
 ## 练习 2.30
+>对于下面的这些语句，请说明对象被声明成了顶层const还是底层const?
+```cpp
+const int v2 = 0;    int v1 = v2;
+int *p1 = &v1, &r1 = v1;
+const int *p2 = &v2, *const p3 = &i, &r2 = v2;
+```
 ## 练习 2.31
-## 练习 2.31
+>假设已有上一个练习中所做的那些声明，则下面的哪些语句是合法的？请说明顶层const和底层const在每个例子中有何体现。
+```cpp
+r1 = r2;
+p1 = p2; p2 = p1;
+p1 = p3; p2 = p3;
+```
+## 练习 2.32
+>下面的代码是否合法？如果合法，请设法将其修改正确。
+```cpp
+int null = 0, *p = null;
+```
 ## 练习 2.33
 ## 练习 2.34
 ## 练习 2.35
