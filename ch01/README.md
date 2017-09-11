@@ -11,7 +11,7 @@
 ```cpp
 std::cout << "The sum of " << v1;
           << " and " << v2;
-		  << " is " << v1 + v2 << std::endl;
+          << " is " << v1 + v2 << std::endl;
 ```
 >如果程序是合法的，它输出什么？如果程序不合法，原因何在？应该如何修正？
 ## [练习 1.7](https://github.com/LuckyGan/CppPrimer/blob/master/ch01/ex1_03.cc)
