@@ -1,43 +1,27 @@
  ///
- /// @file    ex8_06.cc
+ /// @file    ex8_01.cc
  /// @author  zack(18357154046@163.com)
- /// @date    2017-09-10 21:31:13
+ /// @date    2017-08-16 20:53:52
  ///
-#include "../ch07/ex7_26.h" 
-#include <fstream>
 #include <iostream>
+#include <sstream>
+#include <string>
+using std::cout;
+using std::istream;
+using std::string;
+using std::endl;
+using std::istringstream;
 
-int main(int argc,char* argv[]){
-	if(argc!=3){
-		std::cout<<"args error!"<<std::endl;
-		return -1;
+istream& func(istream& is){
+	string buf;
+	while(is>>buf){
+		cout<<buf<<endl;
 	}
-	std::ifstream ifs(argv[1]);
-	if(ifs){
-		std::cout<<"input file not exist."<<std::endl;
-		return -1;
-	}
-	std::ofstream ofs(argv[2],std::ofstream::app);
-	if(ofs){
-		std::cout<<"output file create error."<<std::endl;
-		return -1;
-	}
-	Sales_data total;
-	if(read(ifs,total)){
-		Sales_data trans;
-		while(read(ifs,trans)){
-			if(total.isbn() == trans.isbn())
-				total.combine(trans);
-			else{
-				print(ofs,total)<<std::endl;
-				total=trans;
-			}
-		}
-		print(ofs,total)<<std::endl;
-	}else{
-		std::cerr<<"No data?"<<std::endl;
-	}
-	ifs.close();
-	ofs.close();
+	is.clear();
+	return is;
+}
+int main(){
+	istringstream iss("hello,world");
+	func(iss);//因为istringstream继承自istream，所以这里可以传入实参iss(多态的使用)
 	return 0;
 }
