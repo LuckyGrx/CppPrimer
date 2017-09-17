@@ -1,0 +1,6 @@
+if(read(read(cin,data1),data2))
+显然，该语句可以等价为
+std::istream& is1=read(cin,data1);
+std::istream& is2=read(is1,data2);
+if(is2)
+即，这条语句的作用是通过输入操作符初始化两个Sales_data对象data1,data2
