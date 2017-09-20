@@ -1,0 +1,3 @@
+back_inserter:创建一个使用push_back的迭代器
+front_inserter:创建一个使用push_front的迭代器
+inserter:创建一个使用insert的迭代器，此函数接受第二个参数，这个参数必须是一个指定给定容器的迭代器，元素被插入到给定迭代器所表示的元素之前。
