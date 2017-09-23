@@ -1,0 +1,4 @@
+extern "C" int compute(int*,int);
+extern "C" double compute(double*,double);
+//这两个语句将C++里面的函数声明用C语言的语法规范进行编译
+//因为C语言不支持函数重载(即函数形参列表的差别无法使编译器生成不同的函数名字),所以编译器会报重定义的错误
