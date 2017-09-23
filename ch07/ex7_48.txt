@@ -1,0 +1,9 @@
+当Sales_data的构造函数不是explicit时，
+string null_isbn("9-999-99999-9");
+Sales_data item1(null_isbn);//编译通过
+Sales_data item2("9-999-99999-9");//编译不通过，编译器只会执行一次类型转换，所以不能从
+                                  //const char* 先转成string，再转成临时的Sales_data对象
+当Sales_data的构造函数时explicit时，
+string null_isbn("9-999-99999-9");
+Sales_data item1(null_isbn);//编译不通过
+Sales_data item2("9-999-9999-9");//编译不通过

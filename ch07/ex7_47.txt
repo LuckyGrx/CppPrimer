@@ -1,0 +1,2 @@
+显然，接受一个string参数的Sales_data构造函数应该是explicit，因为这样可以显示的阻止在调用Sales_data的一些
+函数时，自动生成一些临时的Sales_data对象，利于程序的可读性
