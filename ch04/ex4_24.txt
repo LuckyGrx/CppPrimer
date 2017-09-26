@@ -1,0 +1,6 @@
+finalgrade = (grade > 90) ? "high pass" : (grade < 60) ? "fail" : "pass";
+当条件运算符满足左结合律时，该语句等价于
+finalgrade = ((grade > 90) ? "high pass" : (grade < 60)) ? "fail" : "pass";
+显然，“high pass"的类型为const char*,而(grade < 60)的返回类型为bool，
+而条件运算符要求两个表达式类型相同或者可以转换成某个公共类型的表达式，显然这里不符合要求，
+所以这里编译器会报错，导致程序无法运行
