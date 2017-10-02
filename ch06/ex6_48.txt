@@ -1,0 +1,9 @@
+string s;
+while (cin >> s && s != sought) { } //函数体
+assert(cin);
+该循环接受输入，直到终止输入(ctrl+d)或者输入的值为sought.
+显然，该assert起的作用和预期不符，显然，这个assert是判断该循环是否按预期执行，当不按预期执行时，assert才
+会终止程序的执行。
+显然要是终止输入时(ctrl+d)，cin的状态为假，要使assert能判断s == sought，这里应该为!cin
+另外一种情况，要是输入的值为sought，则跳出循环，所以应该增加 s == sought
+显然，这里时并列的情况，所以断言应该写为 assert(!cin || s == sought);
