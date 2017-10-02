@@ -1,0 +1,12 @@
+类型别名：
+using strTen=std::string[10];
+strTen& func(strTen&);
+
+尾置返回类型：
+auto func(strTen&) -> std::string (&)[10];
+
+decltype关键字：
+std::string str[10];
+decltype(str)& func(strTen&);
+
+显然第一个形式记起来最容易，我最喜欢第一种形式
