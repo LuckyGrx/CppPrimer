@@ -19,12 +19,12 @@ using std::string;
 int main(){
 	vector<string> svec;
 	string word;
-	auto iter=svec.begin();
-	while(cin>>word){
-		iter=svec.insert(iter,word);
+	auto iter = svec.begin();
+	while(cin >> word){
+		iter = svec.insert(iter, word);
 	}
-	for(const auto& elem:svec)
-		cout<<elem<<" ";
-	cout<<endl;
+	for(const auto &elem : svec)
+		cout << elem << " ";
+	cout << endl;
 	return 0;
 }

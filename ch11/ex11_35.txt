@@ -1,0 +1,4 @@
+trans_map[key] = value.substr(1);
+//要是转换文件中对于要转换的单词key有多个对应的替换内容，则使用下标运算符会将最后一个替换内容插入该trans_map中.
+trans_map.insert({key, value.substr(1)})
+//要是转换文件中对于要转换的单词key有多个对应的替换内容，则使用insert函数会将第一个替换内容插入该trans_map中.

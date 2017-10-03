@@ -1,0 +1,17 @@
+vector<int>::iterator iter = iv.begin(), mid = iv.begin() + iv.size()/2;
+while (iter != mid)
+	if (*iter == some_val)
+		iv.insert(iter, 2 * some_val);
+显然，该程序会死循环(都没有对迭代器进行自增运算)，修改如下：
+//假定该函数是将原有vector的所有元素的两倍元素值插入到vector中
+
+vector<int>::iterator iter = iv.begin(), mid = iv.begin() + iv.size()/2;
+while (iter != mid) {
+	if (*iter == some_val) {
+		iter=iv.insert(iter, 2 * some_val);
+		++iter;
+		mid = iv.begin() + iv.size()/2;
+	} 
+	++iter;
+}
+
