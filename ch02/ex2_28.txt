@@ -1,0 +1,10 @@
+a) int i, *const cp;
+不合法，因为cp是常量指针，必须初始化
+b) int *p1, *const p2;
+不合法，因为p2是常量指针，必须初始化
+c) const int ic, &r = ic;
+不合法，因为ic是整形常量，必须初始化
+d) const int *const p3;
+不合法，因为p3是指向常量的常量指针(包含了常量指针的含义)，不许初始化
+e) const int *p;
+合法，p是指针常量的指针，不需要初始化
