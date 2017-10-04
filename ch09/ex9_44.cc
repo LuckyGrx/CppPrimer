@@ -10,14 +10,14 @@ using std::endl;
 using std::string;
 
 void replaceOldVal(string &str, const string &oldVal, const string &newVal) {
-	string::iterator iter = str.begin();
-	while (str.end() - iter >= oldVal.begin() - oldVal.end()) {
-		if (string(iter, iter + oldVal.size()) == oldVal) {
-			str.erase(iter, iter + oldVal.size());
-			iter = str.insert(iter, newVal.begin(), newVal.end());//这里之所以要用iter接受返回值，是存在重新迭代器失效的问题(insert后，空间变大，需要重新分配空间)
-			iter += newVal.size();
+	string::size_type beginIdx = 0;
+	while (1) {
+		beginIdx = str.find(oldVal, beginIdx);
+		if (beginIdx != string::npos) {
+			str.replace(beginIdx, oldVal.size(), newVal);
+			beginIdx += newVal.size();
 		} else
-			++iter;
+			break;
 	}
 }
 
