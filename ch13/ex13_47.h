@@ -5,9 +5,12 @@
  ///
 #ifndef __CP5_EX13_44_H__
 #define __CP5_EX13_44_H__
+#include <iostream>
 #include <memory>
 using std::pair;
 using std::uninitialized_copy;
+using std::cout;
+using std::endl;
 
 class String{
 public:
@@ -39,10 +42,12 @@ String::String(const char *s) {
 }
 
 String::String(const String &rhs) {
+	cout << "String(const String&)" << endl;
 	range_initializer(rhs.elements, rhs.end);
 }
 
 String& String::operator=(const String &rhs) {
+	cout << "String& operator=(const String&)" << endl;
 	auto data = alloc_n_copy(rhs.elements, rhs.end);
 	free();
 	elements = data.first;
