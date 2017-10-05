@@ -9,9 +9,11 @@
 #include <iostream>
 #include <string>
 #include <memory>
+#include <algorithm>
 using std::string;
 using std::pair;
 using std::allocator;
+using std::for_each;
 
 class StrVec {
 public:
@@ -92,8 +94,7 @@ pair<string*, string*> StrVec::alloc_n_copy(const string *begin, const string *e
 
 void StrVec::free() {
 	if (elements) {
-		for (auto p = first_free; p != elements; )
-			alloc.destroy(--p);
+		for_each(elements, first_free, [](string *rhs){ alloc.destroy(rhs); });
 		alloc.deallocate(elements, cap - elements);
 	}
 }
