@@ -1,0 +1,5 @@
+while (cin >> word)
+	++word_count.insert({word, 0}).first->second;
+显然根据运算符优先级，该程序等价为：
+while (cin >> word)
+	++(((word_count.insert({word, 0})).first)->second);
