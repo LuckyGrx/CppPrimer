@@ -1,0 +1,4 @@
+a) inline bool eq(const BigInt&, const BigInt&) {...}
+这是内联函数的定义，一般来说，内联函数的定义放在头文件中
+b) void putValues(int *arr, int size);
+这是普通函数的声明，一般来说，普通函数的声明放在头文件中
