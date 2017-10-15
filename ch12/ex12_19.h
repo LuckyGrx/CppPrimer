@@ -35,10 +35,10 @@ public:
 	string& back();
 	string& front() const;
 	string& back() const;
-private:
-	void check(size_type i,const string &msg) const;
 	StrBlobPtr begin();
 	StrBlobPtr end();
+private:
+	void check(size_type i,const string &msg) const;
 private:
 	shared_ptr<vector<string>> data;
 };

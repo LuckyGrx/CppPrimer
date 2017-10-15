@@ -1,0 +1,4 @@
+replace(beg, end, old_val, new_val);           //将迭代器区间[beg, end)内的为old_val的元素替换为new_val
+replace_if(beg, end, pred, new_val);           //将迭代器区间[beg, end)内的使谓词pred为真的元素替换为new_val
+replace_copy(beg, end, dest, old_val, new_val);//将迭代器区间[beg, end)内的元素拷贝到以dest为开始位置的同时，将元素值为old_val的元素替换为new_val，原迭代器件内元素保持不变
+replace_copy_if(beg, end, dest, pred, new_val);//将迭代器区间[beg, end)内的元素拷贝到以dest为开始位置的同时，将使谓词pred为真的元素替换为new_val，原迭代器内元素保持不变
