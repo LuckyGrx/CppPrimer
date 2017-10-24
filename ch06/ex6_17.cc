@@ -7,17 +7,19 @@
 #include <ctype.h>
 #include <string>
 using std::string;
-bool isContainBigLetter(const string& str){
-	for(decltype(str.size()) idx=0;idx<str.size();++idx){
-		if(str[idx]>='A'&&str[idx]<='Z')
+
+bool isContainBigLetter(const string &str) {
+	for (decltype(str.size()) idx = 0; idx < str.size(); ++idx) {
+		if (str[idx] >= 'A' && str[idx] <= 'Z')
 			return true;
 	}
 	return false;
 }
-void stringToUpper(string& str){
-	for(decltype(str.size()) idx=0;idx<str.size();++idx){
-		if(str[idx]>='A'&&str[idx]<='Z'){
-			str[idx]+=32;
+
+void stringToUpper(string &str) {
+	for (decltype(str.size()) idx = 0; idx < str.size(); ++idx) {
+		if (str[idx] >= 'A' && str[idx] <= 'Z') {
+			str[idx] += 32;
 		}
 	}
 }

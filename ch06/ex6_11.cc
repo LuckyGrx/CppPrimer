@@ -7,13 +7,15 @@
 #include <iostream>
 using std::cout;
 using std::endl;
-void reset(int& i){
+
+void reset(int &i) {
 	i=0;
 }
-int main(){
-	int i=1;
-	cout<<"i= "<<i<<endl;
+
+int main() {
+	int i = 1;
+	cout << "i = " << i << endl;
 	reset(i);
-	cout<<"i= "<<i<<endl;
+	cout << "i = " << i << endl;
 	return 0;
 }

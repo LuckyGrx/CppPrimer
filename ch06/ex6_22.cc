@@ -7,16 +7,17 @@
 #include <iostream>
 using std::cout;
 using std::endl;
-void swap(int** a,int** b){
-	int* tmp=*a;
-	*a=*b;
-	*b=tmp;
+
+void swap(int **a,int **b) {
+	int *tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 int main(){
-	int val1=0,val2=1;
-	int* a=&val1,*b=&val2;
-	cout<<"a="<<a<<","<<"b="<<b<<endl;
-	swap(&a,&b);
-	cout<<"a="<<a<<","<<"b="<<b<<endl;
+	int val1 = 0,val2 = 1;
+	int *a = &val1, *b = &val2;
+	cout << "a = " << a <<", " << "b = " << b << endl;
+	swap(&a, &b);
+	cout << "a = " << a <<", " << "b = " << b << endl;
 	return 0;
 }
