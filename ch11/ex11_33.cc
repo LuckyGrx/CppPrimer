@@ -62,8 +62,8 @@ void word_transform(ifstream &map_file,ifstream &input){
 	}
 }
 int main(){
-	ifstream ifs_map("word_map.txt"),
-			 ifs_content("content.txt");
+	ifstream ifs_map("../data/word_map.txt"),
+			 ifs_content("../data/content.txt");
 	if(ifs_map&&ifs_content)
 		word_transform(ifs_map,ifs_content);
 	else
