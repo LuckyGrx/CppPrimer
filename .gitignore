@@ -1,2 +1,4 @@
 # Executables
 *.out
+*.exe
+*.json
