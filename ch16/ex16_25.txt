@@ -1,0 +1,2 @@
+extern template class vector<string>;     //vector<string>实例化声明，它必须在程序的其他地方实例化
+template class vector<Sales_data>;        //vector<Sales_data>实例化定义，它能实例化该类模板的所有成员
