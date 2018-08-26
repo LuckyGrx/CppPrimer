@@ -7,10 +7,7 @@
 #include <iostream>
 #include <string>
 #include <stack>
-using std::cout;
-using std::endl;
-using std::stack;
-using std::string;
+using namespace std;
 
 int main(){
 	string expr = "(5 + 1) * (6 + 3)";

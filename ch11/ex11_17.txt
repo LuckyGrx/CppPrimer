@@ -1,0 +1,4 @@
+copy(v.begin(), v.end(), inserter(c, c.end()));   //合法
+copy(v.begin(), v.end(), back_inserter(c));       //不合法，multiset容器不支持push_back操作
+copy(c.begin(), c.end(), inserter(v, v.end()));   //合法
+copy(c.begin(), c.end(), back_inserter(v));       //合法
