@@ -1,0 +1,12 @@
+decltype处理顶层const和引用的方式与auto有些不同：
+1.如果decltype使用的表达式是一个变量，则decltype返回该变量的类型（包括顶层const和引用在内）
+2.如果decltype使用的表达式不是一个变量，则decltype返回表达式结果对应的类型
+
+举例如下：
+int i = 0, &r = i;
+
+auto a = i;         //int
+decltype(i) b = i;  //int
+
+auto c = r;         //int
+decltype(r) d = i;  //int&
