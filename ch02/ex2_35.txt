@@ -1,0 +1,5 @@
+const int i = 42;
+auto j = i;                   // j的类型：int
+const auto &k = i;            // j的类型：const int&
+auto *p = &i;                 // p的类型：const int*
+const auto j2 = i, &k2 = i;   // j2的类型：const int, k2的类型：const int&, 这条语句错误
