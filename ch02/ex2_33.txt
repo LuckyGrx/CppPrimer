@@ -1,0 +1,14 @@
+int i = 0, &r = i;
+auto a = r;
+const int ci = i, &cr = ci;
+auto b = ci;
+auto c = cr;
+auto d = &i;
+auto e = &ci;
+auto &g = ci;
+a = 42;   // a的类型：int，所以该语句正确
+b = 42;   // b的类型：int，所以该语句正确
+c = 42;   // c的类型：int，所以该语句错误
+d = 42;   // d的类型：int*，所以该语句错误
+e = 42;   // e的类型：const int*，所以该语句错误
+g = 42;   // g的类型：const int&，所以该语句错误
