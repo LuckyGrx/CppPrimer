@@ -1,20 +1,12 @@
- ///
- /// @file    ex7_5.h
- /// @author  zack(18357154046@163.com)
- /// @date    2017-06-15 15:39:00
- ///
-#ifndef __CP5_EX7_15_H__
-#define __CP5_EX7_15_H__
+#ifndef __CP5_EX7_22_H__
+#define __CP5_EX7_22_H__
 #include <string>
 using std::string;
 
-struct Person;
-std::ostream& print(std::ostream&, const Person&);
-std::istream& read(std::istream&, Person&);
-
-struct Person {
-	string _name;
-	string _addr;
+class Person {
+    friend std::ostream& print(std::ostream&, const Person&);
+    friend std::istream& read(std::istream&, Person&);
+public:
 	Person() = default;
 	Person(const string name,const string addr): _name(name), _addr(addr) {
 	}
@@ -27,6 +19,9 @@ struct Person {
 	const string& get_addr() const {
 		return _addr;
 	}
+private:
+	string _name;
+	string _addr;
 };
 
 std::ostream& print(std::ostream &os, const Person &person) {

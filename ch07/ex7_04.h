@@ -6,12 +6,10 @@
 #ifndef __CP5_EX7_4_H__
 #define __CP5_EX7_4_H__
 #include <string>
-using std::string;
 
-class Person{
-private:
-	string _name;
-	string _addr;
+struct Person{
+	std::string _name;
+	std::string _addr;
 };
 #endif
 
