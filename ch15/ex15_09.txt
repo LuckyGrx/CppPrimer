@@ -1,0 +1,4 @@
+Bulk_quote bulk_quote1, bulk_quote2;
+Quote* quote1 = &bulk_quote1;
+Quote& quote2 = bulk_quote2;
+在以上例子中，基类的指针或引用是静态类型，派生类的引用或指针是动态类型

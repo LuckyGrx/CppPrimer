@@ -1,0 +1,2 @@
+因为read函数接收的参数的静态类型是istream&，而ifstream是istream的派生类，
+所以read函数能够接受ifstream类型的实参
