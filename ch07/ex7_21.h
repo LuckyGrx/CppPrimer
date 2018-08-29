@@ -1,17 +1,14 @@
-#ifndef __CP5_EX7_12_H__
-#define __CP5_EX7_12_H__
+#ifndef __CP5_EX7_21_H__
+#define __CP5_EX7_21_H__
 
 #include <iostream>
 #include <string>
 
-struct Sales_data;
-std::istream& read(std::istream&, Sales_data&);
-
-struct Sales_data {
-	std::string bookNo;
-	unsigned units_sold = 0;
-	double revenue = 0.0;
-
+class Sales_data {
+	friend Sales_data add(const Sales_data&, const Sales_data&);
+	friend std::istream& read(std::istream&, Sales_data&);
+	friend std::ostream& print(std::ostream&, const Sales_data&);
+public:
 	Sales_data() = default;
 	Sales_data(const std::string &s, unsigned n, double p) : bookNo(s), units_sold(n), revenue(p * n) {
 	}
@@ -28,6 +25,10 @@ struct Sales_data {
 		revenue += rhs.revenue;
 		return *this;
 	}
+private:
+	std::string bookNo;
+	unsigned units_sold = 0;
+	double revenue = 0.0;
 };
 
 std::istream& read(std::istream &is, Sales_data &item) {
