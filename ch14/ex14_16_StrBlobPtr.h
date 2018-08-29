@@ -1,10 +1,5 @@
- ///
- /// @file    ex12_19.h
- /// @author  zack(18357154046@163.com)
- /// @date    2017-10-08 21:52:29
- ///
-#ifndef __CP5_EX12_19_H__
-#define __CP5_EX12_19_H__
+#ifndef __CP5_EX14_16_STRBLOBPTR_H__
+#define __CP5_EX14_16_STRBLOBPTR_H__
 
 #include <iostream>
 #include <memory>
@@ -77,6 +72,8 @@ inline string& StrBlob::back() const {
 
 
 class StrBlobPtr {
+	friend bool operator==(const StrBlobPtr&, const StrBlobPtr&);
+	friend bool operator!=(const StrBlobPtr&, const StrBlobPtr&);
 public:
 	StrBlobPtr();
 	StrBlobPtr(StrBlob&, size_t);
@@ -112,6 +109,14 @@ inline StrBlobPtr& StrBlobPtr::incr() {
 	check(curr, "increment past end of StrBlobPtr");
 	++curr;
 	return *this;
+}
+
+inline bool operator==(const StrBlobPtr &lhs, const StrBlobPtr &rhs) {
+	return lhs.curr == rhs.curr;
+}
+
+inline bool operator!=(const StrBlobPtr &lhs, const StrBlobPtr &rhs) {
+	return !(lhs == rhs);
 }
 
 inline StrBlobPtr StrBlob::begin() {

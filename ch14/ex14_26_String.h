@@ -1,10 +1,6 @@
- ///
- /// @file    ex14_26_String.h
- /// @author  zack(18357154046@163.com)
- /// @date    2017-09-06 20:57:52
- ///
-#ifndef __CP5_EX14_26_H__
-#define __CP5_EX14_26_H__
+#ifndef __CP5_EX14_26_STRING_H__
+#define __CP5_EX14_26_STRING_H__
+
 #include <string.h>
 #include <iostream>
 #include <memory>
@@ -12,7 +8,7 @@ using std::ostream;
 using std::pair;
 using std::uninitialized_copy;
 
-class String{
+class String {
 	friend ostream& operator<<(ostream&, const String&);
 	friend bool operator==(const String&, const String&);
 	friend bool operator!=(const String&, const String&);
@@ -29,6 +25,7 @@ public:
 	const char* c_str() const;
 	size_t size() const;
 	char& operator[](size_t);
+	const char& operator[](size_t) const;
 private:
 	pair<char*, char*> alloc_n_copy(const char*, const char*);
 	void range_initializer(const char*, const char*);
@@ -125,6 +122,10 @@ bool operator>=(const String &lhs, const String &rhs) {
 
 char& String::operator[](size_t idx) {
 	return *(elements + idx);
+}
+
+const char& String::operator[](size_t idx) const {
+	return *(elements + idx); 
 }
 
 #endif

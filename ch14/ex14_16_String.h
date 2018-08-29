@@ -3,8 +3,8 @@
  /// @author  zack(18357154046@163.com)
  /// @date    2017-09-06 20:57:52
  ///
-#ifndef __CP5_EX14_16_H__
-#define __CP5_EX14_16_H__
+#ifndef __CP5_EX14_16_STRING_H__
+#define __CP5_EX14_16_STRING_H__
 #include <string.h>
 #include <iostream>
 #include <memory>

@@ -1,11 +1,6 @@
- ///
- /// @file    ex14_26_StrVec.h
- /// @author  zack(18357154046@163.com)
- /// @date    2017-08-24 21:18:20
- ///
+#ifndef __EX14_26_STRVEC_H__
+#define __EX14_26_STRVEC_H__
 
-#ifndef __EX14_26_StrVec_H__
-#define __EX14_26_StrVec_H__
 #include <iostream>
 #include <string>
 #include <memory>
@@ -37,6 +32,7 @@ public:
 	void reserve(size_t);
 	void resize(size_t);
 	string& operator[](size_t);
+	const string& operator[](size_t) const;
 private:
 	static allocator<string> alloc;
 	void chk_n_alloc();
@@ -195,6 +191,10 @@ bool operator>=(const StrVec &lhs, const StrVec &rhs) {
 }
 
 string& StrVec::operator[](size_t idx) {
+	return *(elements + idx);
+}
+
+const string& StrVec::operator[](size_t idx) const{
 	return *(elements + idx);
 }
 

@@ -1,10 +1,6 @@
- ///
- /// @file    ex14_26_StrBlob.h
- /// @author  zack(18357154046@163.com)
- /// @date    2017-09-02 12:32:55
- ///
-#ifndef __CP5_EX14_26_StrBlob_H__
-#define __CP5_EX14_26_StrBlob_H__
+#ifndef __CP5_EX14_26_STRBLOB_H__
+#define __CP5_EX14_26_STRBLOB_H__
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -35,6 +31,7 @@ public:
 	string& front() const;
 	string& back() const;
 	string& operator[](size_t idx);
+	const string& operator[](size_t idx) const;
 private:
 	void check(size_type i,const string &msg) const;
 private:
@@ -108,6 +105,11 @@ inline bool operator>=(const StrBlob &lhs, const StrBlob &rhs) {
 inline string& StrBlob::operator[](size_t idx) {
 	check(idx, "out of range");
 	return (*data)[idx];
+}
+
+inline const string& StrBlob::operator[](size_t idx) const {
+    check(idx, "out of range");
+	return (*data)[idx];	
 }
 
 #endif
