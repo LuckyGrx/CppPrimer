@@ -6,7 +6,7 @@
 ## 练习 2.3
 >读程序写结果。
 ```cpp
-unsigned u = 10, u2 =42;
+unsigned u = 10, u2 = 42;
 std::cout << u2 - u << std::endl;
 std::cout << u - u2 << std::endl;
 
@@ -53,7 +53,7 @@ int month = 09, day = 07;
 ```cpp
 std::string global_str;
 int global_int;
-int main(){
+int main() {
     int local_int;
     std::string local_str;
 }
@@ -78,7 +78,7 @@ int main(){
 >下面程序中j的值是多少？
 ```cpp
 int i = 42;
-int main(){
+int main() {
     int i = 100;
     int j = i;
 }

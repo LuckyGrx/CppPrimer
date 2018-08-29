@@ -1,6 +1,7 @@
 # 第3章 字符串、向量和数组
 ## [练习 3.1](https://github.com/LuckyGan/CppPrimer/blob/master/ch03/ex3_01_a.cc)
 ## [练习 3.2](https://github.com/LuckyGan/CppPrimer/blob/master/ch03/ex3_02.cc)
+>编写一段程序从标准输入中一次读入一整行，然后修改该程序使其一次读入一个词。
 ## 练习 3.3
 >请说明string类的输入运算符和getline函数分别是如何处理空白字符的。
 ## [练习 3.4](https://github.com/LuckyGan/CppPrimer/blob/master/ch03/ex3_04.cc)
