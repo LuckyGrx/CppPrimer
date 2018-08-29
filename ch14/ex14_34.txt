@@ -1,5 +1,5 @@
-class Test{
-	int operator()(int lhs,int mid,int rhs){
-		return lhs?mid:rhs;
+class Test {
+	int operator()(bool lhs, int mid, int rhs) {
+		return lhs ? mid : rhs;
 	}
 };

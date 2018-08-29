@@ -1,10 +1,6 @@
- ///
- /// @file    ex14_35.cc
- /// @author  zack(18357154046@163.com)
- /// @date    2017-09-22 10:15:09
- ///
-#ifndef __CP5_EX14_33_H__
-#define __CP5_EX14_33_H__
+#ifndef __CP5_EX14_36_H__
+#define __CP5_EX14_36_H__
+
 #include <iostream>
 #include <string>
 #include <vector>
