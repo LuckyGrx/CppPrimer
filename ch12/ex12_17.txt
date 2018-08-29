@@ -1,0 +1,8 @@
+int ix = 1024, *pi = &ix, *pi2 = new int(2048);
+typedef unique_ptr<int> Intp;
+a) Intp p0(ix);              // 不合法，unique_ptr的初始化只接受指向动态内存的指针类型
+b) Intp p1(pi);              // 不合法，unique_ptr的初始化只接受指向动态内存的指针类型
+c) Intp p2(pi2);             // 合法
+d) Intp p3(&ix);             // 不合法，unique_ptr的初始化只接受指向动态内存的指针类型 
+e) Intp p4(new int(2048));   // 合法
+f) Intp p5(p2.get());        // 不合法，unique_ptr不支持拷贝

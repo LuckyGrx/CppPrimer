@@ -1,0 +1,3 @@
+unique_ptr对象u的release方法是放弃u对指针的控制权，返回指向动态内存的指针，并将u置为空，
+显然，shared_ptr对动态内存里的对象时共享的，其他指向该动态内存对象的shared_ptr也能delete该对象，
+所以该release方法对于shared_ptr是无意义的

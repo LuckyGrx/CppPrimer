@@ -1,10 +1,6 @@
- ///
- /// @file    ex12_16.cc
- /// @author  zack(18357154046@163.com)
- /// @date    2017-10-06 16:06:36
- ///
 #include <iostream>
 #include <memory>
+
 using std::cout;
 using std::endl;
 using std::unique_ptr;

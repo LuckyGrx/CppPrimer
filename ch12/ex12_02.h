@@ -1,10 +1,6 @@
- ///
- /// @file    ex12_02.h
- /// @author  zack(18357154046@163.com)
- /// @date    2017-09-02 12:32:55
- ///
 #ifndef __CP5_EX12_02_H__
 #define __CP5_EX12_02_H__
+
 #include <iostream>
 #include <string>
 #include <vector>
